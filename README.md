@@ -3,6 +3,7 @@
 This repository contains data analysis of Black Friday purchase amount.
 
 # Table Of Contents
+  - [Team Members:](#team-members)
   - [Project Introduction](#project-introduction)
   - [Data and Source Description](#data-and-source-description)
   - [Application of the CRISP-DM Process](#application-of-the-crisp-dm-process)
@@ -13,7 +14,11 @@ This repository contains data analysis of Black Friday purchase amount.
     - [Evaluation](#evaluation)
     - [Conclusion](#conclusion) -->
   - [Conclusion](#conclusion) 
+  - [Summary](#summary)
 
+### Team Members:
+  1. Karan Hirenkumar Shah (kshah51@uncc.edu)
+  2. Sarang Suhas Padalkar (spadalka@uncc.edu)
 
 ## Project Introduction
 Black Friday is the day after American Thanksgiving, meaning the retailers often heavily promote their stores and markdown prices to entice shoppers to buy products both online and offline. Retailers have the freedom to set their Black Friday deals anyway they’d like to better entice purchases. So the major challenge for a Retail store or eCommerce business is to choose product price such that they get maximum profit at the end of the sales. Our project deals with determining the product prices based on the historical retail store sales data. After generating the predictions, our model will help the retail store to decide the price of the products to earn more profits.
@@ -48,12 +53,16 @@ Below are the observations which we have made from the data visualization done a
   * We also transformed the Marital_Status column, as it had 1 and 0 numerical values, so we assigned 1 as Married and 0 as Single. The major reason behind eliminating these numerical values as they me affect the model’s prediction ability as our target variable is numerical.
 
 * **Modeling Phase**
-  * We are planning to implement the supervised model as we are aware of the target variable. The target variable can be predicted using basic Linear regression models and Random forests, which are known to have high accuracies. 
-  * We can use Ensemble methods to use a combination of the above models, at this stage we have not implemented these models, this decision can be made after implementing those models individually and analyzing their performance parameters. 
-  * We are also planning to implement clustering on the occupation column, as the column has very diverse values. Association rules machine learning method is also a feasible option to get relationships between the variables.
+  * Before implemting the models to predict the target variable we implemted a comination of One hot encoding and Lable encoding. This was done to convert the cateorical data into numerical data. Then we implemeted Standard Scalar to scale and to reduce the variance in the dataset to 1.
+  * We implemented multiple supervised models such as Linear Regressor, XGBOOST Regressor and Random Foreset Regressor.
 
 * **Evaluation**
-  * We would be evaluating the models on the basis of the performance parameters such as Mean-squared errors, Model scores. We are planning to eliminate the User_ID and Product_ID columns while performing the predictions.
+  * We have implemeted cross validation technique and hold out validation techinque to evalue model prefromance, we have used 5 fold cross validation. By comapring the R squared erros of each models on the testing data, the best perfromer was the Random Forest model with 5 fold cross validation.
 
 ## Conclusion
-  Our project deals with determining the product prices based on the historical retail store sales data. After generating the predictions, our model will help the retail store to decide optimal prices of the products to earn more profits on the upcoming Black Friday.  
+  Our project deals with determining the product prices based on the historical retail store sales data. After generating the predictions, our model will help the retail store to decide optimal prices of the products to earn more profits on the upcoming Black Friday.
+## Summary
+ The data quality of the dataset was pretty good and we had put fewer efforts in the data cleaning. But most of the effort was put in the Feature engineering part, as we had very generic features and we had to extract important knowledge from the dataset, some of the columns like Age had values as different age ranges, this was overcome by transforming the column and replacing it with the random values from that age range as part of Feature engineering. We created multiple new features to more closely understand the dataset. We implanted multiple supervised models such as Linear Regressor, XGBOOST Regressor and Random Foreset Regressor and Random Forest Regresor was the best performer. We have tried to implement the aif360 module to mitigate the Sex Bais in the model, but unfortunately the library needs the dataset to be transformed in Structured and BinaryLabelDataset, which we would like to explore more in future.
+ Here We would like to let you know some of the assupmtions made as part of this project that would help if you would like to use our work:  
+* While replacing the value 55+ in Age column, we have made assumption that the max age of the person may be 100. So we have replaced them with the random values in the range of (55-100).  
+* We have also assumed the max number of years spend by an individual in a city to be 10 years.
