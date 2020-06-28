@@ -3,7 +3,6 @@
 This repository contains data analysis of Black Friday purchase amount.
 
 # Table Of Contents
-  - [Team Members:](#team-members)
   - [Project Introduction](#project-introduction)
   - [Data and Source Description](#data-and-source-description)
   - [Application of the CRISP-DM Process](#application-of-the-crisp-dm-process)
@@ -16,9 +15,6 @@ This repository contains data analysis of Black Friday purchase amount.
   - [Conclusion](#conclusion) 
   - [Summary](#summary)
 
-### Team Members:
-  1. Karan Hirenkumar Shah (kshah51@uncc.edu)
-  2. Sarang Suhas Padalkar (spadalka@uncc.edu)
 
 ## Project Introduction
 Black Friday is the day after American Thanksgiving, meaning the retailers often heavily promote their stores and markdown prices to entice shoppers to buy products both online and offline. Retailers have the freedom to set their Black Friday deals anyway they’d like to better entice purchases. So the major challenge for a Retail store or eCommerce business is to choose product price such that they get maximum profit at the end of the sales. Our project deals with determining the product prices based on the historical retail store sales data. After generating the predictions, our model will help the retail store to decide the price of the products to earn more profits.
